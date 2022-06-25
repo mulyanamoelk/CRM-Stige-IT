@@ -1,6 +1,3 @@
-import 'package:crm_stigeit/styles/consts.dart';
-import 'package:crm_stigeit/widget/custom_form.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -10,9 +7,9 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(left: 24, right: 24, top: 24),
+        margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
         child: Column(
-          children: [
+          children: const [
             // CustomForm(
             //     hintText: 'Nama Lengkap',
             //     icons: Icon(

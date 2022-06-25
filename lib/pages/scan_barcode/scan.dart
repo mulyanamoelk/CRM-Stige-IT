@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:shimmer/shimmer.dart';
 
 class ScanBarcode extends StatefulWidget {
   const ScanBarcode({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _ScanBarcodeState extends State<ScanBarcode> {
     super.initState();
   }
 
-  Future<void> scanBarcodeNormal() async {
+  Future<void> scanBarcode() async {
     String barcodeScanRes;
 
     try {
@@ -45,9 +46,20 @@ class _ScanBarcodeState extends State<ScanBarcode> {
             direction: Axis.vertical,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              ElevatedButton(
-                  onPressed: () => scanBarcodeNormal(),
-                  child: Text('Start barcode scan')),
+              const Shimmer(
+                  gradient: LinearGradient(
+                      colors: <Color>[Color(0XFF00518F), Color(0XFF00CBFF)]),
+                  child: Text(
+                    'Scan Disini',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  )),
+              InkWell(
+                onTap: scanBarcode,
+                child: Image.asset(
+                  'assets/images/photo-camera.png',
+                  width: 150,
+                ),
+              )
             ]));
   }
 }

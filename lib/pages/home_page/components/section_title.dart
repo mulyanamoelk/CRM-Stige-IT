@@ -11,11 +11,11 @@ class SectionTitle extends StatelessWidget {
     return Container(
       width: 280,
       height: 200,
-      margin: EdgeInsets.only(left: 44, right: 44, top: 10, bottom: 20),
+      margin: const EdgeInsets.only(left: 44, right: 44, top: 10, bottom: 20),
       decoration: BoxDecoration(
         image:
-            DecorationImage(image: AssetImage('assets/images/Indonesia.png')),
-        gradient: LinearGradient(
+            const DecorationImage(image: AssetImage('assets/images/Indonesia.png')),
+        gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: <Color>[Color(0XFF00CBFF), Color(0XFF00518F)]),
@@ -36,14 +36,14 @@ class SectionTitle extends StatelessWidget {
                 width: 60,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
+            const Text(
               'Stige IT',
               style: TextStyle(color: kwhite),
             ),
-            Text(
+            const Text(
               'NIK : 1234567890',
               style: TextStyle(color: kwhite),
             )

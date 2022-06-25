@@ -20,7 +20,7 @@ class _SplashFirstState extends State<SplashFirst> {
 
   @override
   SplashFirst() async {
-    var duration = Duration(seconds: 3);
+    var duration = const Duration(seconds: 3);
     Timer(duration, () {
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => const SplashSecond()));
@@ -34,7 +34,7 @@ class _SplashFirstState extends State<SplashFirst> {
         Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 229),
+              margin: const EdgeInsets.only(top: 229),
               child: Center(
                 child: Image.asset(
                   'assets/images/stigeit.png',
@@ -42,8 +42,8 @@ class _SplashFirstState extends State<SplashFirst> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 50),
+            const Padding(
+              padding: EdgeInsets.only(top: 50),
               child: Text(
                 'Sistem Pemenangan legislatif',
                 style: TextStyle(

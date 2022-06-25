@@ -3,9 +3,6 @@ import 'package:crm_stigeit/pages/home_page/home.dart';
 import 'package:crm_stigeit/pages/profil_page/profil.dart';
 import 'package:crm_stigeit/pages/scan_barcode/scan.dart';
 
-import 'package:crm_stigeit/pages/signin_page/signin.dart';
-
-import 'package:crm_stigeit/pages/signup_page/signup.dart';
 import 'package:crm_stigeit/styles/consts.dart';
 import 'package:flutter/material.dart';
 
@@ -19,9 +16,9 @@ class ConvexNavigationBars extends StatefulWidget {
 class _ConvexNavigationBarsState extends State<ConvexNavigationBars> {
   late int index;
   List pages = [
-    HomePage(),
-    ScanBarcode(),
-    ProfilePage(),
+    const HomePage(),
+    const ScanBarcode(),
+    const ProfilePage(),
   ];
 
   @override
@@ -36,6 +33,7 @@ class _ConvexNavigationBarsState extends State<ConvexNavigationBars> {
       body: pages[index],
       bottomNavigationBar: ConvexAppBar(
           backgroundColor: kwhite,
+          curveSize: 12,
           color: kblue1,
           elevation: 0,
           onTap: (value) {
@@ -43,17 +41,16 @@ class _ConvexNavigationBarsState extends State<ConvexNavigationBars> {
               index = value;
             });
           },
-          items: [
+          items: const [
+            TabItem(
+                title: 'Home',
+                icon: Icon(
+                  Icons.home,
+                  color: kblue1,
+                )),
             TabItem(
               icon: Icon(
-                Icons.home,
-                color: kblue1,
-              ),
-              title: 'Home',
-            ),
-            TabItem(
-              icon: Icon(
-                Icons.qr_code_sharp,
+                Icons.qr_code_scanner_rounded,
                 color: kblue1,
               ),
               title: 'Scan',
@@ -63,7 +60,7 @@ class _ConvexNavigationBarsState extends State<ConvexNavigationBars> {
                   Icons.person,
                   color: kblue1,
                 ),
-                title: 'Anggota'),
+                title: 'Profile'),
           ]),
     );
   }

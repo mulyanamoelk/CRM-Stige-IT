@@ -1,4 +1,5 @@
-import 'package:crm_stigeit/pages/signin_relawan_page/components/form_relawan.dart';
+import 'package:crm_stigeit/pages/profil_page/profil.dart';
+import 'package:crm_stigeit/pages/signin_relawan_page/signin_relawan.dart';
 import 'package:flutter/material.dart';
 
 import '../../../styles/consts.dart';
@@ -11,6 +12,7 @@ class SectionQuick extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(bottom: 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -19,10 +21,10 @@ class SectionQuick extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset(
-                  'assets/images/Component.png',
-                  width: 135,
+                  'assets/images/stopwatch.png',
+                  width: 100,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Container(
@@ -33,10 +35,9 @@ class SectionQuick extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                    const FormSignInRelawan()));
+                                builder: (context) => const ProfilePage()));
                       },
-                      child: Text(
+                      child: const Text(
                         'Quick Count',
                         style: TextStyle(
                             color: kwhite,
@@ -47,18 +48,18 @@ class SectionQuick extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            width: 15,
+          const SizedBox(
+            width: 30,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
                 Image.asset(
-                  'assets/images/Component.png',
-                  width: 135,
+                  'assets/images/statistics.png',
+                  width: 100,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 Container(
@@ -66,8 +67,8 @@ class SectionQuick extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50), color: kblue1),
                   child: TextButton(
                       onPressed: () {},
-                      child: Text(
-                        'Data Survey',
+                      child: const Text(
+                        'Real Count',
                         style: TextStyle(
                             color: kwhite,
                             fontSize: 16,

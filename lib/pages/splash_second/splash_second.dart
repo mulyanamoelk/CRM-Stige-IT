@@ -1,5 +1,4 @@
 import 'package:crm_stigeit/pages/navigation/convex_navigation_bar.dart';
-import 'package:crm_stigeit/pages/signin_page/signin.dart';
 import 'package:crm_stigeit/styles/consts.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class _SplashSecondState extends State<SplashSecond> {
         child: Stack(
           children: [
             Positioned(
-              top: 100,
+              top: 150,
               left: 24,
               child: Image.asset(
                 'assets/images/splash.png',
@@ -26,11 +25,11 @@ class _SplashSecondState extends State<SplashSecond> {
               ),
             ),
             Positioned(
-              top: 450,
-              right: 100,
+              top: 500,
+              right: 140,
               child: Container(
-                margin: EdgeInsets.only(top: 24),
-                child: Center(
+                margin: const EdgeInsets.only(top: 24),
+                child: const Center(
                   child: Text(
                     'Membantu Anda \n  Memenangkan \n PILKADA ',
                     textAlign: TextAlign.center,
@@ -53,7 +52,7 @@ class _SplashSecondState extends State<SplashSecond> {
                             builder: (context) =>
                                 const ConvexNavigationBars()));
                   },
-                  child: Text(
+                  child: const Text(
                     'Next',
                     style: TextStyle(
                         color: kblue1,

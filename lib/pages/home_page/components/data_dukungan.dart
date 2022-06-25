@@ -20,7 +20,7 @@ class _SectionDukunganState extends State<SectionDukungan> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 44, right: 44, top: 20),
+      margin: const EdgeInsets.only(left: 44, right: 44, top: 20),
       child: Column(
         children: [
           Container(
@@ -38,11 +38,10 @@ class _SectionDukunganState extends State<SectionDukungan> {
                           backgroundColor: kblue1,
                           child: Image.asset(
                             'assets/images/logo.png',
-                            color: kwhite,
                             width: 50,
                           ),
                         ),
-                        Text('Tentang')
+                        const Text('Tentang')
                       ],
                     ),
                   ),
@@ -57,12 +56,11 @@ class _SectionDukunganState extends State<SectionDukungan> {
                         CircleAvatar(
                           backgroundColor: kblue1,
                           child: Image.asset(
-                            'assets/images/pengurus.png',
-                            color: kwhite,
-                            width: 50,
+                            'assets/images/team-management.png',
+                            width: 30,
                           ),
                         ),
-                        Text('Pengurus')
+                        const Text('Paslon')
                       ],
                     ),
                   ),
@@ -77,12 +75,11 @@ class _SectionDukunganState extends State<SectionDukungan> {
                         CircleAvatar(
                           backgroundColor: kblue1,
                           child: Image.asset(
-                            'assets/images/aktivitas.png',
-                            color: kwhite,
-                            width: 50,
+                            'assets/images/conversation.png',
+                            width: 30,
                           ),
                         ),
-                        Text('Kegiatan')
+                        const Text('Kegiatan')
                       ],
                     ),
                   ),
@@ -105,10 +102,10 @@ class _SectionDukunganState extends State<SectionDukungan> {
                           backgroundColor: kblue1,
                           child: Image.asset(
                             'assets/images/youtube.png',
-                            width: 50,
+                            width: 25,
                           ),
                         ),
-                        Text('Video')
+                        const Text('Video')
                       ],
                     ),
                   ),
@@ -123,12 +120,11 @@ class _SectionDukunganState extends State<SectionDukungan> {
                         CircleAvatar(
                           backgroundColor: kblue1,
                           child: Image.asset(
-                            'assets/images/pengurus.png',
-                            color: kwhite,
-                            width: 50,
+                            'assets/images/books.png',
+                            width: 25,
                           ),
                         ),
-                        Text('Ebook')
+                        const Text('Data Saksi')
                       ],
                     ),
                   ),
@@ -143,12 +139,11 @@ class _SectionDukunganState extends State<SectionDukungan> {
                         CircleAvatar(
                           backgroundColor: kblue1,
                           child: Image.asset(
-                            'assets/images/aktivitas.png',
-                            color: kwhite,
-                            width: 50,
+                            'assets/images/storage.png',
+                            width: 30,
                           ),
                         ),
-                        Text('Merchandise')
+                        const Text('Data TPS')
                       ],
                     ),
                   ),

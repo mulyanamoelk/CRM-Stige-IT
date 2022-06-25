@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget {
       width: width,
       height: 50,
       decoration:
-          BoxDecoration(color: kblue1, borderRadius: BorderRadius.circular(32)),
+          BoxDecoration(color: kblue1, borderRadius: BorderRadius.circular(17)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -29,7 +29,7 @@ class CustomButton extends StatelessWidget {
               child: Text(
                 text,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                     color: kwhite, fontSize: 14, fontWeight: FontWeight.bold),
               ))
         ],
