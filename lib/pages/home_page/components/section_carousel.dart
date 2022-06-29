@@ -10,8 +10,8 @@ class SectionCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
         items: [
-          Image.asset('assets/images/dodol.png'),
-          Image.asset('assets/images/dodol.jpg'),
+          Image.asset('assets/images/politics.jpg'),
+          Image.asset('assets/images/politics.jpg'),
         ],
         options: CarouselOptions(
           height: 150,

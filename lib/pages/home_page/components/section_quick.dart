@@ -25,11 +25,12 @@ class SectionQuick extends StatelessWidget {
                   width: 100,
                 ),
                 const SizedBox(
-                  height: 5,
+                  height: 10,
                 ),
                 Container(
+                  width: 120,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50), color: kblue1),
+                      borderRadius: BorderRadius.circular(10), color: kblue1),
                   child: TextButton(
                       onPressed: () {
                         Navigator.push(
@@ -60,11 +61,12 @@ class SectionQuick extends StatelessWidget {
                   width: 100,
                 ),
                 const SizedBox(
-                  height: 5,
+                  height: 10,
                 ),
                 Container(
+                  width: 120,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50), color: kblue1),
+                      borderRadius: BorderRadius.circular(10), color: kblue1),
                   child: TextButton(
                       onPressed: () {},
                       child: const Text(

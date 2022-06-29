@@ -10,11 +10,11 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 280,
-      height: 200,
+      height: 180,
       margin: const EdgeInsets.only(left: 44, right: 44, top: 10, bottom: 20),
       decoration: BoxDecoration(
-        image:
-            const DecorationImage(image: AssetImage('assets/images/Indonesia.png')),
+        image: const DecorationImage(
+            image: AssetImage('assets/images/Indonesia.png')),
         gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -27,12 +27,16 @@ class SectionTitle extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
+              width: 80,
               decoration: BoxDecoration(
-                color: kwhite,
+                gradient: LinearGradient(colors: <Color>[
+                  Color(0XFF00CBFF),
+                  Color(0XFFFFFFFFF),
+                ]),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Image.asset(
-                'assets/images/logo.png',
+                'assets/images/graduated.png',
                 width: 60,
               ),
             ),

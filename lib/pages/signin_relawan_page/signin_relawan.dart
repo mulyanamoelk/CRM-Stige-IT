@@ -4,6 +4,7 @@ import 'package:crm_stigeit/pages/signin_relawan_page/components/capture_relawan
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_agama.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_gender.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_goldar.dart';
+import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_pendidikan.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_provinsi.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/form_date_time.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/form_email.dart';
@@ -46,6 +47,7 @@ class _SignInRelawanState extends State<SignInRelawan> {
                   const Gender(),
                   const DropdownGoldar(),
                   const DropdownAgama(),
+                  const DropdownPendidikan(),
                   const DropDownProvinsi(),
                   const CaptureImage(),
                   ButtonRelawan(formkey: _formkey)

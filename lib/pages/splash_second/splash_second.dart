@@ -19,18 +19,16 @@ class _SplashSecondState extends State<SplashSecond> {
             Positioned(
               top: 150,
               left: 24,
-              child: Image.asset(
-                'assets/images/splash.png',
-                width: 352,
-              ),
-            ),
-            Positioned(
-              top: 500,
-              right: 140,
-              child: Container(
-                margin: const EdgeInsets.only(top: 24),
-                child: const Center(
-                  child: Text(
+              child: Column(
+                children: [
+                  Image.asset(
+                    'assets/images/splash.png',
+                    width: 352,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Text(
                     'Membantu Anda \n  Memenangkan \n PILKADA ',
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -38,7 +36,7 @@ class _SplashSecondState extends State<SplashSecond> {
                         fontSize: 24,
                         fontWeight: FontWeight.bold),
                   ),
-                ),
+                ],
               ),
             ),
             Positioned(

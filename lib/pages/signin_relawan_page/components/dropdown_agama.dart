@@ -27,8 +27,11 @@ class _DropdownAgamaState extends State<DropdownAgama> {
       child: SizedBox(
         height: 56,
         child: DropdownButtonFormField(
+            icon: const ImageIcon(
+              AssetImage('assets/images/praying.png'),
+              color: kblue1,
+            ),
             decoration: InputDecoration(
-                prefixIcon: Icon(Icons.home),
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(17),
                     borderSide: const BorderSide(color: kgrey, width: 1)),

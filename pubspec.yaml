@@ -38,15 +38,15 @@ dependencies:
   convex_bottom_bar: ^3.0.0
 
   # Get Widget
-  getwidget: ^3.0.1
-  #Carousel
+  # getwidget: ^3.0.1
+ #Carousel
   carousel_slider: ^4.1.1
-  #Calender
+   #Calender
   datetime_picker_formfield: ^2.0.0
-  #dropdown
-  dropdown_search: ^5.0.2
-  url_launcher: ^6.1.3
-  intl: ^0.17.0
+   #dropdown
+  # dropdown_search: ^5.0.2
+ 
+  # intl: ^0.17.0
   flutter_barcode_scanner: ^2.0.0
   flutter_share: ^2.0.0
   shimmer: ^2.0.0
@@ -56,11 +56,14 @@ dependencies:
   # firebase_core: ^1.17.1
   # provider: ^6.0.3
   http: ^0.13.4
-  # dio: ^4.0.6
+  dio: ^4.0.6
+
+  #url
+  url_launcher: ^6.1.4
   #signature/tanda tangan digital
-  syncfusion_flutter_signaturepad: ^20.1.59
+
   signature: ^5.0.1
-  #image
+   #image
   image_picker: ^0.8.5+3
  
 dev_dependencies:

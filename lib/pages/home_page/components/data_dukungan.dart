@@ -1,3 +1,4 @@
+import 'package:crm_stigeit/widget/custom_inkwell.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -20,139 +21,75 @@ class _SectionDukunganState extends State<SectionDukungan> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 44, right: 44, top: 20),
+      margin: const EdgeInsets.only(left: 15, right: 15, top: 20),
       child: Column(
         children: [
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: kblue1,
-                          child: Image.asset(
-                            'assets/images/logo.png',
-                            width: 50,
-                          ),
-                        ),
-                        const Text('Tentang')
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: InkWell(
-                    onTap: (() {}),
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: kblue1,
-                          child: Image.asset(
-                            'assets/images/team-management.png',
-                            width: 30,
-                          ),
-                        ),
-                        const Text('Paslon')
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: InkWell(
-                    onTap: (() {}),
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: kblue1,
-                          child: Image.asset(
-                            'assets/images/conversation.png',
-                            width: 30,
-                          ),
-                        ),
-                        const Text('Kegiatan')
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CustomInkwel(
+                  images: 'assets/images/logo.png',
+                  Texts: 'Tentang',
+                  onTaps: () async {
+                    await openUrl('https://stigeit.com/',
+                        forceWebView: true, enableJavaScript: true);
+                  }),
+              CustomInkwel(
+                  images: 'assets/images/paslon.png',
+                  Texts: 'Paslon',
+                  onTaps: _youtube),
+              CustomInkwel(
+                  images: 'assets/images/witness.png',
+                  Texts: 'Data Saksi',
+                  onTaps: _youtube),
+              CustomInkwel(
+                  images: 'assets/images/storage.png',
+                  Texts: 'Data TPS',
+                  onTaps: () async {
+                    await openUrl(
+                        'https://youtube.com/channel/UCPoikUUzvjm0fT8PCoH_BvA');
+                  }),
+            ],
           ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: InkWell(
-                    onTap: _youtube,
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: kblue1,
-                          child: Image.asset(
-                            'assets/images/youtube.png',
-                            width: 25,
-                          ),
-                        ),
-                        const Text('Video')
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: InkWell(
-                    onTap: (() {}),
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: kblue1,
-                          child: Image.asset(
-                            'assets/images/books.png',
-                            width: 25,
-                          ),
-                        ),
-                        const Text('Data Saksi')
-                      ],
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: InkWell(
-                    onTap: (() {}),
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: kblue1,
-                          child: Image.asset(
-                            'assets/images/storage.png',
-                            width: 30,
-                          ),
-                        ),
-                        const Text('Data TPS')
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          )
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CustomInkwel(
+                  images: 'assets/images/youtube.png',
+                  Texts: 'Video',
+                  onTaps: () async {
+                    await openUrl(
+                        'https://youtube.com/channel/UCPoikUUzvjm0fT8PCoH_BvA',
+                        forceWebView: true,
+                        enableJavaScript: true);
+                  }),
+              CustomInkwel(
+                  images: 'assets/images/conversation.png',
+                  Texts: 'Kegiatan',
+                  onTaps: _youtube),
+              CustomInkwel(
+                  images: 'assets/images/operator.png',
+                  Texts: 'Operator',
+                  onTaps: _youtube),
+              CustomInkwel(
+                  images: 'assets/images/budget.png',
+                  Texts: 'Finance',
+                  onTaps: () async {
+                    await openUrl('https://web.telegram.org/k/#-613508795');
+                  }),
+            ],
+          ),
         ],
       ),
     );
+  }
+}
+
+Future<void> openUrl(String url,
+    {bool forceWebView = false, bool enableJavaScript = false}) async {
+  {
+    if (await canLaunch(url)) {}
+    await launch(url,
+        forceWebView: forceWebView, enableJavaScript: enableJavaScript);
   }
 }
