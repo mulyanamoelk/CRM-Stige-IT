@@ -68,7 +68,9 @@ class _TakeImageProfileState extends State<TakeImageProfile> {
         CustomButton(
             width: 120,
             text: 'Take Image',
-            onPressed: () => getImage(ImageSource.gallery))
+            onPressed: () => getImage(
+                  ImageSource.gallery,
+                ))
       ],
     );
   }

@@ -1,3 +1,4 @@
+import 'package:crm_stigeit/pages/show_profile/show_profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widget/custom_button.dart';
@@ -20,10 +21,8 @@ class ButtonSignIn extends StatelessWidget {
           text: 'SignIn',
           onPressed: () {
             if (_formSignIn.currentState!.validate()) {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ConvexNavigationBars()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ShowProfile()));
             }
           }),
     );

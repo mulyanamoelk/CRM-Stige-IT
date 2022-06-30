@@ -1,20 +1,19 @@
-import 'package:crm_stigeit/widget/custom_form.dart';
 import 'package:flutter/material.dart';
 
 import '../../../styles/consts.dart';
 
-class FormPasswordSignIn extends StatefulWidget {
-  const FormPasswordSignIn({Key? key}) : super(key: key);
+class FormUlangiPassword extends StatefulWidget {
+  const FormUlangiPassword({Key? key}) : super(key: key);
 
   @override
-  State<FormPasswordSignIn> createState() => _FormPasswordSignInState();
+  State<FormUlangiPassword> createState() => _FormUlangiPasswordState();
 }
 
-class _FormPasswordSignInState extends State<FormPasswordSignIn> {
-  bool _isHidePassword = true;
+class _FormUlangiPasswordState extends State<FormUlangiPassword> {
+  bool isHidePassword = true;
   void _tooglePassword() {
     setState(() {
-      _isHidePassword = !_isHidePassword;
+      isHidePassword = !isHidePassword;
     });
   }
 
@@ -25,7 +24,7 @@ class _FormPasswordSignInState extends State<FormPasswordSignIn> {
       child: TextFormField(
         autofocus: false,
         initialValue: '',
-        obscureText: _isHidePassword,
+        obscureText: isHidePassword,
         decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(17),
@@ -33,7 +32,7 @@ class _FormPasswordSignInState extends State<FormPasswordSignIn> {
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(17),
                 borderSide: const BorderSide(color: kblue1)),
-            hintText: 'Password',
+            hintText: 'Ulangi Password',
             prefixIcon: Icon(
               Icons.lock,
               color: kblue1,
@@ -41,12 +40,12 @@ class _FormPasswordSignInState extends State<FormPasswordSignIn> {
             suffixIcon: IconButton(
               onPressed: () {
                 setState(() {
-                  _isHidePassword = !_isHidePassword;
+                  isHidePassword = !isHidePassword;
                 });
               },
               icon: Icon(
-                _isHidePassword ? Icons.visibility_off : Icons.visibility,
-                color: _isHidePassword ? kgrey : kblue1,
+                isHidePassword ? Icons.visibility_off : Icons.visibility,
+                color: isHidePassword ? kgrey : kblue1,
               ),
             ),
             isDense: true),

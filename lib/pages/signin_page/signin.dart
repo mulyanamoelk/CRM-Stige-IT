@@ -1,5 +1,6 @@
 import 'package:crm_stigeit/pages/navigation/convex_navigation_bar.dart';
 import 'package:crm_stigeit/pages/profil_page/profil.dart';
+import 'package:crm_stigeit/pages/signin_page/components/button_google_signin.dart';
 import 'package:crm_stigeit/pages/signin_page/components/button_signin.dart';
 import 'package:crm_stigeit/pages/signin_page/components/form_email_signin.dart';
 import 'package:crm_stigeit/pages/signin_page/components/form_password_signin.dart';
@@ -58,8 +59,9 @@ class _SignInPageState extends State<SignInPage> {
                     children: [
                       TitleSignIn(),
                       FormEmailSignIn(),
-                      FornPasswordSignIn(),
+                      FormPasswordSignIn(),
                       ButtonSignIn(formSignIn: _formSignIn),
+                      ButtonGoogleSignIn(),
                       SectionAccount()
                     ],
                   )),

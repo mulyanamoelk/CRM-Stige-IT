@@ -1,16 +1,15 @@
-import 'package:crm_stigeit/widget/custom_form.dart';
 import 'package:flutter/material.dart';
 
 import '../../../styles/consts.dart';
 
-class FormPasswordSignIn extends StatefulWidget {
-  const FormPasswordSignIn({Key? key}) : super(key: key);
+class FormPassword extends StatefulWidget {
+  const FormPassword({Key? key}) : super(key: key);
 
   @override
-  State<FormPasswordSignIn> createState() => _FormPasswordSignInState();
+  State<FormPassword> createState() => _FormPasswordState();
 }
 
-class _FormPasswordSignInState extends State<FormPasswordSignIn> {
+class _FormPasswordState extends State<FormPassword> {
   bool _isHidePassword = true;
   void _tooglePassword() {
     setState(() {

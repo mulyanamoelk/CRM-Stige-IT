@@ -37,17 +37,16 @@ dependencies:
   #navigation bar
   convex_bottom_bar: ^3.0.0
 
-  # Get Widget
-  # getwidget: ^3.0.1
+ 
  #Carousel
   carousel_slider: ^4.1.1
    #Calender
   datetime_picker_formfield: ^2.0.0
-   #dropdown
-  # dropdown_search: ^5.0.2
+ 
  
   # intl: ^0.17.0
   flutter_barcode_scanner: ^2.0.0
+  
   flutter_share: ^2.0.0
   shimmer: ^2.0.0
   #google signIn
