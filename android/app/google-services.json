@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "163983903287",
+    "project_id": "crm-stige",
+    "storage_bucket": "crm-stige.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163983903287:android:01636d28354f891dc78db2",
+        "android_client_info": {
+          "package_name": "com.example.crm_stigeit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163983903287-4nf1nonigmfsp46if7fog7m8lssv21jb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxKLsWhEIQ-nTLM2HGTB7cYhqO8r31QoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163983903287-4nf1nonigmfsp46if7fog7m8lssv21jb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

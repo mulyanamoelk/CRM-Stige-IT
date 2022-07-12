@@ -1,3 +1,4 @@
+import 'package:crm_stigeit/widget/custom_password.dart';
 import 'package:flutter/material.dart';
 
 import '../../../styles/consts.dart';
@@ -21,23 +22,9 @@ class _FormUlangiPasswordState extends State<FormUlangiPassword> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 10),
-      child: TextFormField(
-        autofocus: false,
-        initialValue: '',
-        obscureText: isHidePassword,
-        decoration: InputDecoration(
-            enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(17),
-                borderSide: const BorderSide(color: kgrey)),
-            focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(17),
-                borderSide: const BorderSide(color: kblue1)),
-            hintText: 'Ulangi Password',
-            prefixIcon: Icon(
-              Icons.lock,
-              color: kblue1,
-            ),
-            suffixIcon: IconButton(
+      child: CustomPassword(
+          hintText: 'Ulangi Password',
+          iconsSuff: IconButton(
               onPressed: () {
                 setState(() {
                   isHidePassword = !isHidePassword;
@@ -46,16 +33,13 @@ class _FormUlangiPasswordState extends State<FormUlangiPassword> {
               icon: Icon(
                 isHidePassword ? Icons.visibility_off : Icons.visibility,
                 color: isHidePassword ? kgrey : kblue1,
-              ),
-            ),
-            isDense: true),
-        validator: (String? value) {
-          if (value!.isEmpty) {
-            return 'Password tidak boleh kosong';
-          } else {}
-          return null;
-        },
-      ),
+              )),
+          iconsPre: Icon(
+            Icons.lock,
+            color: kblue1,
+          ),
+          Obscure: isHidePassword,
+          ValidatorValue: 'Isi Password'),
     );
   }
 }

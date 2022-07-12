@@ -23,8 +23,14 @@ class _CaptureImageState extends State<CaptureImage> {
     return Padding(
       padding: const EdgeInsets.all(2.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [TakeKtp(), TakeImageProfile()],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TakeKtp(),
+          SizedBox(
+            width: 80,
+          ),
+          TakeImageProfile()
+        ],
       ),
     );
   }
@@ -56,11 +62,13 @@ class _TakeImageProfileState extends State<TakeImageProfile> {
             ? Image.file(
                 _image!,
                 width: 100,
+                height: 100,
                 fit: BoxFit.cover,
               )
             : Image.asset(
                 'assets/images/graduated.png',
                 width: 100,
+                height: 100,
               ),
         SizedBox(
           height: 20,

@@ -18,27 +18,29 @@ class CustomForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      keyboardType: inputType,
-      obscureText: obscure,
-      decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(17),
-              borderSide: const BorderSide(color: kgrey)),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(17),
-              borderSide: const BorderSide(color: kblue1)),
-          prefixIcon: icons,
-          prefixIconColor: kblue1,
-          hintText: hintText,
-          hintStyle: const TextStyle(color: kgrey)),
-      validator: (value) {
-        if (value!.isEmpty) {
-          return textval;
-        } else {
-          return null;
-        }
-      },
+    return Container(
+      child: TextFormField(
+        keyboardType: inputType,
+        obscureText: obscure,
+        decoration: InputDecoration(
+            enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(17),
+                borderSide: const BorderSide(color: kgrey)),
+            focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(17),
+                borderSide: const BorderSide(color: kblue1)),
+            prefixIcon: icons,
+            prefixIconColor: kblue1,
+            hintText: hintText,
+            hintStyle: const TextStyle(color: kgrey)),
+        validator: (value) {
+          if (value!.isEmpty) {
+            return textval;
+          } else {
+            return null;
+          }
+        },
+      ),
     );
   }
 }

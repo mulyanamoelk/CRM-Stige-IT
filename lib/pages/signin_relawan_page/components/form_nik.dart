@@ -9,12 +9,14 @@ class FormNIKs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 10),
+    return Container(
+      margin: EdgeInsets.only(top: 24),
+      height: 56,
       child: TextFormField(
         autofocus: true,
         keyboardType: TextInputType.number,
-        decoration: InputDecoration(labelText: 'Masukan 16 digit angka',
+        decoration: InputDecoration(
+          labelText: 'Masukan 16 digit angka',
           hintText: '3205050107990055',
           prefixIcon: const Icon(
             Icons.credit_card,

@@ -1,18 +1,16 @@
 import 'package:crm_stigeit/styles/consts.dart';
+import 'package:crm_stigeit/widget/custom_form.dart';
 import 'package:crm_stigeit/widget/custom_password.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/widgets.dart';
 
-class FormPasswordRelawan extends StatefulWidget {
-  const FormPasswordRelawan({Key? key}) : super(key: key);
+class FormPasswordUpdate extends StatefulWidget {
+  const FormPasswordUpdate({Key? key}) : super(key: key);
 
   @override
-  State<FormPasswordRelawan> createState() => _FormPasswordRelawanState();
+  State<FormPasswordUpdate> createState() => _FormPasswordUpdateState();
 }
 
-class _FormPasswordRelawanState extends State<FormPasswordRelawan> {
+class _FormPasswordUpdateState extends State<FormPasswordUpdate> {
   bool _isHidePassword = true;
   void tooglePassword() {
     setState(() {
@@ -41,7 +39,7 @@ class _FormPasswordRelawanState extends State<FormPasswordRelawan> {
             color: kblue1,
           ),
           Obscure: _isHidePassword,
-          ValidatorValue: 'Isi Password'),
+          ValidatorValue: 'Password tidak boleh kosong'),
     );
   }
 }

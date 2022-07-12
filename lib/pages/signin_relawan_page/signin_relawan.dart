@@ -4,6 +4,7 @@ import 'package:crm_stigeit/pages/signin_relawan_page/components/capture_relawan
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_agama.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_gender.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_goldar.dart';
+import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_kabupaten.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_pendidikan.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/dropdown_provinsi.dart';
 import 'package:crm_stigeit/pages/signin_relawan_page/components/form_date_time.dart';
@@ -17,6 +18,7 @@ import 'package:crm_stigeit/pages/signin_relawan_page/components/form_try_passwo
 import 'package:crm_stigeit/pages/signin_relawan_page/components/form_whatsapp.dart';
 import 'package:crm_stigeit/styles/consts.dart';
 import 'package:crm_stigeit/widget/custom_form.dart';
+import 'package:crm_stigeit/widget/custom_password.dart';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -31,7 +33,6 @@ class SignInRelawan extends StatefulWidget {
 class _SignInRelawanState extends State<SignInRelawan> {
   final _formkey = GlobalKey<FormState>();
   final format = DateFormat("yyyy-MM-dd");
-  bool _isHidePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -53,9 +54,9 @@ class _SignInRelawanState extends State<SignInRelawan> {
                   const DropdownGoldar(),
                   const DropdownAgama(),
                   const DropdownPendidikan(),
-                  const DropDownProvinsi(),
+                  const DropdownKabs(),
                   const CaptureImage(),
-                  const FormPassword(),
+                  const FormPasswordRelawan(),
                   const FormUlangiPassword(),
                   ButtonRelawan(formkey: _formkey)
                 ],

@@ -1,5 +1,7 @@
+import 'package:crm_stigeit/pages/form_update_data/update_data.dart';
 import 'package:crm_stigeit/pages/show_profile/components/popup_menu.dart';
 import 'package:crm_stigeit/pages/signin_page/signin.dart';
+import 'package:crm_stigeit/services/firebase_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_share/flutter_share.dart';
 
@@ -25,7 +27,12 @@ class PopUpProfil extends StatelessWidget {
         PopupMenuItem(
             child: ListTile(
           leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const UpdateData()));
+              },
               icon: ImageIcon(
                 AssetImage('assets/images/user.png'),
                 color: kblue1,
@@ -54,7 +61,9 @@ class PopUpProfil extends StatelessWidget {
         PopupMenuItem(
           child: ListTile(
             leading: IconButton(
-                onPressed: () {
+                onPressed: () async {
+                  await FirebaseServices().signOut();
+
                   Navigator.push(
                       context,
                       MaterialPageRoute(
